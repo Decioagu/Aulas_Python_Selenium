@@ -7,19 +7,8 @@ from selenium.webdriver.support import expected_conditions
 from time import sleep
 
 '''
-explicit_wait() é um método do Selenium usado para esperar que uma condição
-específica seja verdadeira antes de continuar a executar o código. Isso é útil
-quando você precisa esperar que um elemento seja carregado, uma ação seja
-concluída ou uma condição específica seja atendida.
-
-Como usar?
-
-Para usar , você precisa:explicit_wait():
-"from selenium.webdriver.support.ui import WebDriverWait"
-"from selenium.webdriver.support import expected_conditions"
-Criar uma argumento da classe passando o driver do Selenium como argumento "WebDriverWait()"
-Definir a "instância" que você deseja esperar usando um dos métodos "expected_conditions"
-Chamar o método na instância passando a condição como "argumento.until(expected_conditions.'condição')"
+"WebDriverWait": Especifica um tempo de espera para um único elemento ou condição.
+Permite maior controle e flexibilidade para esperar por elementos específicos.
 '''
 browser = webdriver.Chrome()
 
