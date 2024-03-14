@@ -1,8 +1,9 @@
 # Aulas_Python_Selenium
 
 - O Selenium é um conjunto de ferramentas open-source usadas para automatizar tarefas em navegadores web.  Ele simula a interação do usuário com o navegador, como clicar em botões, preencher formulários e navegar por páginas.
+---
+## Selenium
 
-### Selenium
 **Aula_01**
 - Métodos Selenium para navegação:
     - __.refresh()__: Recarrega a página web atualmente aberta no navegador. 
@@ -52,7 +53,7 @@ OBS: método __.send_keys(Keys.ENTER)__ é utilizado para simular a tecla __"Ent
 - __.implicitly_wait()__ define  um tempo limite global para quanto tempo o WebDriver aguardará que um elemento esteja presente na página antes de lançar uma exceção. É essencialmente uma  "rede de segurança" para evitar que seu script falhe, por não esta carregado.
 
 __Python:__
-browser.find_element(By.XPATH, '(//img[@class="inventory_item_img"])[1]')
+- browser.find_element(By.XPATH, '(//img[@class="inventory_item_img"])[1]')
 ---
 
 
@@ -83,28 +84,35 @@ elementos irmãos que vêm depois de um elemento específico, dentro do mesmo el
 
 Exemplo de __/following-sibling::__ :
 __HTML:__
-<body>
-	<b style="color:green">Inner Frame Check box :</b> 
-	<input id="a" type="checkbox">
-</body>
+
+- `<body>`
+-	`<b style="color:green">Inner Frame Check box :</b>`
+-	`<input id="a" type="checkbox">`
+- `</body>`
 
 __Python:__
-browser.find_element(By.XPATH,'//b[@style="color:green"]/following-sibling::input[@id="a"]')
+
+- browser.find_element(By.XPATH,'//b[@style="color:green"]/following-sibling::input[@id="a"]')
 ---
 
 **Aula_10 e Aula_11**
 - Localização de elemento pagina Web por __Tag__ e __texto__:
 
 __Python:__
-browser.find_element(By.XPATH, "//div[@class='inventory_item_name' __and__ text()='Sauce Labs Backpack']").is_displayed()
+- browser.find_element(By.XPATH, "//div[@class='inventory_item_name' __and__ text()='Sauce Labs Backpack']").is_displayed()
 ---
 
 **Aula_12**
 - Fechar janela de alerta no site:
-- __.switch_to.alert.accept()__ "identificar alerta e clica"
+	- __.switch_to.alert.accept()__ "identificar alerta e clica"
+---
 
-### Pytest
-O __Pytest__ é uma ferramenta gratuita e popular utilizada para automatizar testes em código Python.  Resumidamente, o __Pytest__ auxilia no processo de desenvolvimento de software Python ao garantir a qualidade do código através da automatização de testes.
+## Pytest
 
-### Page Objects
-No contexto de testes automatizados, o __Page Objects__ é um padrão de design (design pattern) que visa melhorar a organização, manutenção e legibilidade dos testes. Resumidamente, o __Page Objects__ torna os testes mais organizados e fáceis de manter.
+- O __Pytest__ é uma ferramenta gratuita e popular utilizada para automatizar testes em código Python.  Resumidamente, o __Pytest__ auxilia no processo de desenvolvimento de software Python ao garantir a qualidade do código através da automatização de testes.
+
+---
+
+## Page Objects
+
+- No contexto de testes automatizados, o __Page Objects__ é um padrão de design (design pattern) que visa melhorar a organização, manutenção e legibilidade dos testes. Resumidamente, o __Page Objects__ torna os testes mais organizados e fáceis de manter.
