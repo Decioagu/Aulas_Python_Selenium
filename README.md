@@ -82,7 +82,8 @@ antes de lançar uma exceção.
 - __/following-sibling::__ é um eixo XPath usado para navegar por um documento XML ou HTML e selecionar
 elementos irmãos que vêm depois de um elemento específico, dentro do mesmo elemento pai.
 
-Exemplo de __/following-sibling::__ :
+Exemplo de __"/following-sibling::"__
+
 __HTML:__
 
 - `<body>`
