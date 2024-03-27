@@ -1,11 +1,12 @@
 # video aula 19
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver import ActionChains, Keys
 from time import sleep
 
 '''
 Métodos Selenium:
+
+OBS: Antes de usar os métodos, é necessário primeiro localizar o elemento web (tag).
 
 1. click():
 Este método "simula o clique do mouse" em um elemento web.
@@ -42,29 +43,39 @@ sleep(1)
 nome_usuario.send_keys('standard_user') # inserir texto na tag selecionada
 senha.send_keys('secret_sauce') # inserir texto na tag selecionada
 sleep(1)
-# botao_login.click() # clicar 1x
-# ActionChains(browser).double_click(botao_login).perform() # clicar 2x
-# ActionChains(browser).context_click(botao_login).perform() # clicar 1x botão direito
 
-botao_login.send_keys(Keys.ENTER) # simula um clicar 1x no "botao_login"
+botao_login.click()
 
-'''
-O método .send_keys(Keys.ENTER) é utilizado para simular a tecla "Enter"em
-um campo de texto. Isso pode ser útil para realizar diversas ações em websites, como:
-
-Enviar um formulário:
-Após preencher os campos de um formulário, utilize .send_keys(Keys.ENTER) no botão
-de envio para submetê-lo.
-'''
 titulo = browser.find_element(By.XPATH, '//div[@class="product_label"]')
 print(titulo.text) # exibe o texto dentro da tag
 assert titulo.text == 'Products' # teste
+'''
+O ".text" dentro do Selenium é usado para obter o texto visível dentro de um elemento web.
+Ele é um método muito útil para verificar se o conteúdo textual esperado está presente
+em uma página da web ou para extrair dados de texto de um site.
+Antes de usar o .text, você precisa primeiro localizar o elemento web.
+'''
 
 foto_mochila = browser.find_element(By.XPATH, '(//img[@class="inventory_item_img"])[1]')
 # foto_mochila = browser.find_element(By.XPATH, '(//a[@id])[5]') # ou
 # foto_mochila = browser.find_element(By.XPATH, '//img[@src="./img/sauce-backpack-1200x1500.jpg"]') # ou
 # foto_mochila = browser.find_element(By.XPATH, '//a[@id="item_4_img_link"]/img[@class="inventory_item_img"]') # ou
-
+print()
 print(foto_mochila.get_attribute('src')) # exibe atributo da tag
+print(foto_mochila.get_attribute('class')) # exibe atributo da tag
+
+'''
+O método ".get_attribute()" em Selenium é usado para obter o valor de um atributo
+de um elemento web. Ele é um método muito útil para extrair informações de sites
+da web durante a automação de testes ou coleta de dados.
+Antes de usar o ".get_attribute()", você precisa primeiro localizar o elemento web.
+'''
+
+print()
+texto = browser.find_element(By.XPATH, "//div[@class='inventory_item_name']")
+print(texto.get_attribute('class')) # exibe atributo da tag
+
+print(texto.text) # exibe texto dentro da tag
+
 sleep(3)
 

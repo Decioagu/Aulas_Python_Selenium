@@ -41,11 +41,10 @@
 
 **Aula_05**
 - Métodos Selenium:
-- __click()__: Este método "simula o clique do mouse" em um elemento web.
-- __send_keys()__: Este método "insere texto em um campo de texto ou caixa de entrada".
-- __get_attribute()__: Este método "obtém o valor de um atributo" de um elemento web.
-- __text__: Este método "retorna o texto" presente em um elemento web.
-OBS: método __.send_keys(Keys.ENTER)__ é utilizado para simular a tecla __"Enter"__ em um campo de texto, como um click.
+- __.click()__: Este método "simula o clique do mouse" em um elemento web.
+- __.send_keys()__: Este método "insere texto em um campo de texto ou caixa de entrada".
+- __.text__: Este método "retorna o texto" presente em um elemento web.
+- __.get_attribute()__: Este método "obtém o valor de um atributo" de um elemento web.
 --- 
 
 **Aula_06**
@@ -107,6 +106,36 @@ __Python:__
 - Fechar janela de alerta no site:
 	- __.switch_to.alert.accept()__ "identificar alerta e clica"
 ---
+
+**Aula_13**
+- O módulo __"selenium.webdriver.support.events"__ fornece método de class para registrar e responder a eventos do navegador durante a automação com Selenium. Permitindo monitorar e reagir a ações do usuário, como cliques, digitações e navegação.
+---
+
+**Aula_14 e Aula_15**
+- __"ActionChains"__ simular interações complexas do usuário com elementos da web, como:
+    - Movimentos do mouse: Passar o mouse sobre elementos, arrastar e soltar elementos.
+    - Clique no botão do mouse: Executar cliques esquerdos, cliques direitos e cliques duplos.
+    - Interações com o teclado: Simulação de pressionamentos e liberações de teclas.
+    - Ações combinadas: Criação de ações para imitar o comportamento real do usuário.
+
+- A __Keysclasse__ fornece uma coleção de constantes que representam várias teclas do teclado que você pode usar para simular interações do usuário com elementos da web.
+-Exemplo:
+    - Usamos .send_keys() para inserir texto na barra de pesquisa, podemos utilizar __.send_keys(Keys ENTER)__, para simular um click em uma Tag na Web.
+---
+
+**Aula_16**
+.move_to_element(element): move o cursor do mouse sobre um elemento.
+.click(element): realiza um clique simples no elemento.
+.double_click(element): executa um clique duplo no elemento.
+.context_click(element): clica com o botão direito no elemento (abre o menu de contexto).
+.send_keys(keys): envia sequências de teclas para o campo de foco atual.
+.pause(valor numérico): aguardar em segundo valor numérico
+.key_down(Keys.SHIFT): pressionar tecla SHIFT do teclado para baixo
+
+__Python:__
+- browser.find_element(By.XPATH,"//p[contains(text(), 'Eventos de mouse são baseados em ações do mouse.')]")
+---
+
 
 ## Pytest
 
