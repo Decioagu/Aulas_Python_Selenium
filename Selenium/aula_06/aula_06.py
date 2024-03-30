@@ -21,16 +21,16 @@ Se o elemento não for encontrado dentro do limite de tempo, uma exceção como 
 
 browser = webdriver.Chrome()
 
-browser.implicitly_wait(12) # aguarda
+browser.implicitly_wait(30) # aguarda
 
 browser.maximize_window() # maximiza a tela do "site"
 
 browser.get('https://chercher.tech/practice/implicit-wait-example') # acesso a pagina desejada "site"
 
-# OBS: .find_element() não encontrado causa erro; .find_elements() NÃO ocorre erro
+# OBS: .find_element() não encontrado causa erro / em .find_elements() NÃO ocorre erro
 
 checkbox = browser.find_element(By.XPATH, "//input[@type='checkbox']") # identifica as tag no site
 assert checkbox.is_displayed() # teste
 
 checkbox.click() # clicar checkbox
-sleep(15) # aguardar 15s
+# sleep(15) # aguardar 15s

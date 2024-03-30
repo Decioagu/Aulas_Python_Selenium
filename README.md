@@ -1,7 +1,20 @@
+
+
 # Aulas_Python_Selenium
 
 - O Selenium é um conjunto de ferramentas open-source usadas para automatizar tarefas em navegadores web.  Ele simula a interação do usuário com o navegador, como clicar em botões, preencher formulários e navegar por páginas.
 ---
+
+## Page Objects
+
+- No contexto de testes automatizados, o __Page Objects__ é um padrão de design (design pattern) que visa melhorar a organização, manutenção e legibilidade dos testes. Resumidamente, o __Page Objects__ torna os testes mais organizados e fáceis de manter.
+---
+
+## Pytest
+
+- O __Pytest__ é uma ferramenta gratuita e popular utilizada para automatizar testes em código Python.  Resumidamente, o __Pytest__ auxilia no processo de desenvolvimento de software Python ao garantir a qualidade do código através da automatização de testes.
+---
+
 ## Selenium
 
 **Aula_01**
@@ -55,7 +68,6 @@ __Python:__
 - browser.find_element(By.XPATH, '(//img[@class="inventory_item_img"])[1]')
 ---
 
-
 **Aula_07**
 - "__WebDriverWait()__": Especifica um tempo de espera para um único elemento ou condição, como:
     - Condições de Visibilidade:
@@ -70,9 +82,7 @@ __Python:__
 ---
 
 **Aula_08**
-- __.implicitly_wait()__: Aplicável globalmente a todos os elementos da página.
-Define um tempo máximo que o Selenium espera para encontrar um elemento
-antes de lançar uma exceção.
+- __dropdowns__ ou __menu suspenso__: são elementos de navegação comuns em sites e aplicativos. Eles funcionam como __caixa de seleção__ que revelam uma lista de opções quando acionadas pelo usuário.
 ---
 
 **Aula_09**
@@ -135,14 +145,4 @@ __Python:__
 __Python:__
 - browser.find_element(By.XPATH,"//p[contains(text(), 'Eventos de mouse são baseados em ações do mouse.')]")
 ---
-
-
-## Pytest
-
-- O __Pytest__ é uma ferramenta gratuita e popular utilizada para automatizar testes em código Python.  Resumidamente, o __Pytest__ auxilia no processo de desenvolvimento de software Python ao garantir a qualidade do código através da automatização de testes.
-
 ---
-
-## Page Objects
-
-- No contexto de testes automatizados, o __Page Objects__ é um padrão de design (design pattern) que visa melhorar a organização, manutenção e legibilidade dos testes. Resumidamente, o __Page Objects__ torna os testes mais organizados e fáceis de manter.

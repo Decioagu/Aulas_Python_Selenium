@@ -16,7 +16,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 '''
 browser = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
-browser.implicitly_wait(12)
+browser.implicitly_wait(30)
 '''
 "implicitly_wait": Aplicável globalmente a todos os elementos da página.
 Define um tempo máximo que o Selenium espera para encontrar um elemento

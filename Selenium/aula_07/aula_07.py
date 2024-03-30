@@ -17,7 +17,7 @@ browser.maximize_window() # maximiza a tela do "site"
 browser.get('https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver') # acesso a pagina desejada "site"
 
 # Esperar até que o elemento esteja presente
-wait = WebDriverWait(browser, 15) # argumento
+wait = WebDriverWait(browser, 12) # argumento
 
 '''
 Condições de Alertas:
@@ -75,59 +75,60 @@ aguardar_caixa_de_selecao = wait.until(expected_conditions.element_located_to_be
 print(aguardar_caixa_de_selecao)
 sleep(2)
 
-# '''
-# Lista de Métodos expected_conditions em Selenium:
-# Condições de Visibilidade:
-# # visibility_of(locator) - Espera até que o elemento esteja visível e ocupando espaço no DOM.
-# # visibility_of_all_elements_located(locator) - Espera até que todos os elementos estejam
-# visíveis e ocupando espaço no DOM.
-# # invisibility_of_element_located(locator) - Espera até que o elemento esteja invisível no DOM.
-# # invisibility_of_all_elements_located(locator) - Espera até que todos os elementos
-# estejam invisíveis no DOM.
+'''
+Lista de Métodos expected_conditions em Selenium:
 
-# Condições de Presença:
-# # presence_of_element_located(locator) - Espera até que o elemento esteja presente no DOM.
-# # presence_of_all_elements_located(locator) - Espera até que todos os elementos estejam presentes no DOM.
-# # staleness_of(element) - Espera até que o elemento não esteja mais presente no DOM
-# (útil para verificar se um elemento foi removido).
+Condições de Visibilidade:
+    # visibility_of(locator) - Espera até que o elemento esteja visível e ocupando espaço no DOM.
+    # visibility_of_all_elements_located(locator) - Espera até que todos os elementos estejam
+    visíveis e ocupando espaço no DOM.
+    # invisibility_of_element_located(locator) - Espera até que o elemento esteja invisível no DOM.
+    # invisibility_of_all_elements_located(locator) - Espera até que todos os elementos
+    estejam invisíveis no DOM.
 
-# Condições de Clique:
-# # element_to_be_clickable(locator) - Espera até que o elemento esteja visível, habilitado e clicável.
-# # element_to_be_selected(locator) - Espera até que o elemento esteja selecionado
-# (para caixas de seleção e botões de rádio).
+Condições de Presença:
+    # presence_of_element_located(locator) - Espera até que o elemento esteja presente no DOM.
+    # presence_of_all_elements_located(locator) - Espera até que todos os elementos estejam presentes no DOM.
+    # staleness_of(element) - Espera até que o elemento não esteja mais presente no DOM
+    (útil para verificar se um elemento foi removido).
 
-# Condições de Atributo:
-# # text_to_be_present_in_element(locator, text) - Espera até que o texto esteja presente no elemento.
-# # text_to_be_present_in_element_value(locator, text) - Espera até que o texto esteja presente no
-# valor do atributo do elemento.value
-# # attribute_to_be_equal(locator, attribute, value) - Espera até que o valor do atributo
-# do elemento seja igual ao valor especificado.
+Condições de Clique:
+    # element_to_be_clickable(locator) - Espera até que o elemento esteja visível, habilitado e clicável.
+    # element_to_be_selected(locator) - Espera até que o elemento esteja selecionado
+    (para caixas de seleção e botões de rádio).
 
-# Condições de Título:
-# # title_is(title) - Espera até que o título da página seja igual ao título especificado.
-# # title_contains(title) - Espera até que o título da página contenha o título especificado.
+Condições de Atributo:
+    # text_to_be_present_in_element(locator, text) - Espera até que o texto esteja presente no elemento.
+    # text_to_be_present_in_element_value(locator, text) - Espera até que o texto esteja presente no
+    valor do atributo do elemento.value
+    # attribute_to_be_equal(locator, attribute, value) - Espera até que o valor do atributo
+    do elemento seja igual ao valor especificado.
 
-# Condições de URL:
-# # url_to_be(url) - Espera até que a URL da página seja igual à URL especificada.
-# # url_to_contain(url) - Espera até que a URL da página contenha a URL especificada.
+Condições de Título:
+    # title_is(title) - Espera até que o título da página seja igual ao título especificado.
+    # title_contains(title) - Espera até que o título da página contenha o título especificado.
 
-# Condições de Janela/Navegador:
-# # number_of_windows_to_be(number) - Espera até que o número de janelas abertas seja
-# igual ao número especificado.
-# # window_to_be_switched_to(window) - Espera até que a janela especificada seja a janela ativa.
+Condições de URL:
+    # url_to_be(url) - Espera até que a URL da página seja igual à URL especificada.
+    # url_to_contain(url) - Espera até que a URL da página contenha a URL especificada.
 
-# Condições de Alertas:
-# # alert_is_present() - Espera até que um alerta esteja presente.
+Condições de Janela/Navegador:
+    # number_of_windows_to_be(number) - Espera até que o número de janelas abertas seja
+    igual ao número especificado.
+    # window_to_be_switched_to(window) - Espera até que a janela especificada seja a janela ativa.
 
-# Condições Lógicas:
-# # any_of(expected_conditions) - Espera até que qualquer uma das condições especificadas seja verdadeira.
-# # all_of(expected_conditions) - Espera até que todas as condições especificadas sejam verdadeiras.
+Condições de Alertas:
+    # alert_is_present() - Espera até que um alerta esteja presente.
 
-# Observações:
-# Esta lista não é exaustiva. Existem outros métodos disponíveis no Selenium.ExpectedConditions
-# A sintaxe dos métodos pode variar ligeiramente de acordo com a linguagem de
-# programação que você está usando.
-# É importante consultar a documentação do Selenium para obter mais informações
-# sobre cada método e como utilizá-lo de forma eficaz.
-# '''
+Condições Lógicas:
+    # any_of(expected_conditions) - Espera até que qualquer uma das condições especificadas seja verdadeira.
+    # all_of(expected_conditions) - Espera até que todas as condições especificadas sejam verdadeiras.
+
+Observações:
+    Esta lista não é exaustiva. Existem outros métodos disponíveis no Selenium.ExpectedConditions
+    A sintaxe dos métodos pode variar ligeiramente de acordo com a linguagem de
+    programação que você está usando.
+    É importante consultar a documentação do Selenium para obter mais informações
+    sobre cada método e como utilizá-lo de forma eficaz.
+'''
 
