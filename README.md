@@ -29,7 +29,7 @@
 ---
 
 **Aula_02**
-- Três métodos do objeto WebDriver.
+- Três métodos do objeto __WebDriver__.
     - O método __.title__ retornará uma string com o título da página.
     - O método __.current_url__ retornará uma string com a URL completa da página.
     - O método __.page_source__ retornará uma string com o código-fonte HTML da página.
@@ -113,8 +113,15 @@ __Python:__
 ---
 
 **Aula_12**
-- Fechar janela de alerta no site:
-	- __.switch_to.alert.accept()__ "identificar alerta e clica"
+- Janelas de alertas:
+	- A linha de código __"driver.switch_to.alert"__ é usada para alternar o foco do navegador para um alerta JavaScript. Isso significa que o navegador irá parar de interagir com a página web principal e se concentrará no alerta, permitindo que você acesse e manipule o conteúdo do alerta.
+        - __Responder ao alerta__: Use os métodos __accept()__ ou __dismiss()__ para confirmar ou cancelar o alerta, respectivamente.
+        - __Inserir dados no alerta__: Se o alerta for um prompt, use o método __sendKeys()__ para inserir o texto desejado.
+        - OBS: (Causa erro se não houver alerta)
+
+    - from selenium.webdriver.common.alert import Alert:
+        - A __Alert__ classe fornece funcionalidades para interagir com caixas de alerta.
+        - OBS: (Não causa erro se não houver alerta)
 ---
 
 **Aula_13**
@@ -134,15 +141,32 @@ __Python:__
 ---
 
 **Aula_16**
-.move_to_element(element): move o cursor do mouse sobre um elemento.
-.click(element): realiza um clique simples no elemento.
-.double_click(element): executa um clique duplo no elemento.
-.context_click(element): clica com o botão direito no elemento (abre o menu de contexto).
-.send_keys(keys): envia sequências de teclas para o campo de foco atual.
-.pause(valor numérico): aguardar em segundo valor numérico
-.key_down(Keys.SHIFT): pressionar tecla SHIFT do teclado para baixo
+- from selenium.webdriver import ActionChains, Keys
+    - __ActionChains__ permite que você controle movimentos do mouse, cliques pressionamentos de teclado semelhante ao usuário.
+        __.move_to_element(element)__: move o cursor do mouse sobre um elemento.
+        __.click(element)__: realiza um clique simples no elemento.
+        __.double_click(element)__: executa um clique duplo no elemento.
+        __.context_click(element)__: clica com o botão direito no elemento (abre o menu de contexto).
+        __.send_keys(keys)__: envia sequências de teclas para o campo de foco atual.
+        __.pause(valor numérico)__: aguardar em segundo valor numérico
+        
+
+    - O método __Keys.ENTER__ é utilizado para simular a tecla "Enter"em um campo de texto. Isso pode ser útil para realizar diversas ações em websites
+        - __.key_down(Keys.ENTER)__: pressionar tecla ENTER do teclado para baixo
 
 __Python:__
 - browser.find_element(By.XPATH,"//p[contains(text(), 'Eventos de mouse são baseados em ações do mouse.')]")
 ---
+
+**Aula_17**
+- Pop-up é uma janela que aparece no seu navegador sem você pedir.
+- No Selenium, os identificadores de janela são usados para gerenciar e alternar entre várias janelas ou guias do navegador associadas a uma única instância do WebDriver.
+    - Use para obter o identificador da janela __atual.get_window_handle()__
+    - Use para obter todas as alças de janela __abertas.window_handles()__
+    - Use para alternar o foco entre as __janelas.switch_to.window(handle)__
+    
+---
+
+**Aula_18**
+- O __".execute_script()"__ é um método poderoso em ferramentas de automação web como o Selenium WebDriver que permite executar scripts JavaScript diretamente no contexto da página web aberta no navegador. Isso oferece flexibilidade para realizar ações que não são diretamente suportadas pelas APIs do Selenium ou para automatizar tarefas complexas que exigem manipulação mais granular da página __browser.execute_script()__.
 ---
