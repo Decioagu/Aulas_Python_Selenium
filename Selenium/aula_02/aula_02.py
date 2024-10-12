@@ -17,8 +17,10 @@ browser = webdriver.Chrome()
 browser.maximize_window() # maximiza a tela do "site"
 
 browser.get('https://www.saucedemo.com/v1/') # acesso a pagina desejada "site"
-print()
+print('<============================>')
 print(browser.title) # exibi titulo da pagina (nome da aba)
+print('<============================>')
 print(browser.current_url) # exibe o endereço da pagina "site"
+print('<============================>')
 print(browser.page_source) # exibe código-fonte HTML da pagina "site"
 sleep(3)

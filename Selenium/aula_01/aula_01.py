@@ -54,7 +54,7 @@ sleep(3)
 browser.refresh() # atualizar a pagina "site"
 sleep(3)
 
-browser.get('https://www.google.com.br/')
+browser.get('https://www.google.com.br/') # acesso a pagina desejada "site"
 sleep(3)
 
 browser.back() # retorna a pagina anterior "site"

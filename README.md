@@ -170,3 +170,46 @@ __Python:__
 **Aula_18**
 - O __".execute_script()"__ é um método poderoso em ferramentas de automação web como o Selenium WebDriver que permite executar scripts JavaScript diretamente no contexto da página web aberta no navegador. Isso oferece flexibilidade para realizar ações que não são diretamente suportadas pelas APIs do Selenium ou para automatizar tarefas complexas que exigem manipulação mais granular da página __browser.execute_script()__.
 ---
+
+**Selenium IDE**
+
+O Selenium IDE é uma extensão para navegadores que facilita a criação de testes automatizados para aplicações web. Ele funciona como um gravador, capturando as ações do usuário enquanto interage com um site, e as transformando em um script de teste.
+
+https://www.youtube.com/watch?v=fhRDWsLpV84
+---
+
+**INSPEÇÃO NO NAVEGADOR**
+
+Aulas: 12, 14 e 15.
+
+Exemplos:
+
+Abrir navegador:
+- inspecionar:
+	- Ctrl+f
+
+https://www.saucedemo.com/v1/
+
+Busca por id:
+input#login-button ou #login-button
+(TAG#nome_id)
+
+Busca por class:
+input.btn_action ou .btn_action
+(TAG.nome_class)
+
+Busca por tag:
+input[value=LOGIN] ou [value=LOGIN]
+(TAG[TAG=nome_tag])
+
+Outras combinações de busca:
+input.form_input[name=user-name]
+(TAG.nome_class[TAG=nome_tag])
+
+
+Busca por Xpath:
+//input[@id="user-name"]
+(//TAG[@TAG="nome_tag"])
+
+
+
